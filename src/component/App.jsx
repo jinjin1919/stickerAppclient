@@ -16,12 +16,12 @@ function App() {
     const[resLst, setResLst] = useState([{}]); 
 
     useEffect(() => {
-      fetch("/articles").then(
+      fetch("https://young-beach-16264-75b93278ef37.herokuapp.com/articles").then(
         response => response.json()
       ).then (
         data => {
           setLst(data)
-          fetch(`/articles/${inp}`).then(
+          fetch(`https://young-beach-16264-75b93278ef37.herokuapp.com/articles/${inp}`).then(
             response => response.json()
           ).then (
             data => {
@@ -55,7 +55,7 @@ function App() {
             return index !== id;
           })});
         
-        Axios.delete(`/articles/${title}`)
+        Axios.delete(`https://young-beach-16264-75b93278ef37.herokuapp.com/articles/${title}`)
         .then(res => console.log("Deleted!!!", res)).catch(err => console.log(err)); 
         
     }
