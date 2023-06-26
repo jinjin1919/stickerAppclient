@@ -1,7 +1,6 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "proxy": "https://young-beach-16264-75b93278ef37.herokuapp.com",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

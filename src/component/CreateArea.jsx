@@ -9,7 +9,7 @@ function CreateArea(props) {
 
   function postNote() {
     
-    if(note.title.length !==0){
+    // if(note.title.length !==0){
 
       Axios.post("https://young-beach-16264-75b93278ef37.herokuapp.com/articles", {
         title: note.title, 
@@ -18,9 +18,13 @@ function CreateArea(props) {
         res => {
           console.log(res.data)
         }
+      ).catch (
+        (err) => {
+          console.log(err); 
+        }
       )
-
-    }
+      // }
+    
   }
 
   const[showText, setText] = useState(false); 
